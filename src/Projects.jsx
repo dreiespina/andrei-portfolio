@@ -35,7 +35,7 @@ const projects = [
       text: "View Documentation",
     },
     apk: {
-      url: "/Smart Locator Device.apk",
+      url: "/Smart_Locator_Device.apk",
       text: "Download APK",
     },
   },
