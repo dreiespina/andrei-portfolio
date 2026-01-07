@@ -19,7 +19,7 @@ const projects = [
       text: "View Publication",
     },
     apk: {
-      url: "/UDM_Student_Faculty_Evaluation.apkhttps://drive.google.com/drive/folders/1j8ujiC_F49Fj4ajh5d5NVS9OeCSPMWyp?usp=sharing",
+      url: "https://drive.google.com/drive/folders/1j8ujiC_F49Fj4ajh5d5NVS9OeCSPMWyp?usp=sharing",
       text: "Download APK",
     },
   },
@@ -35,7 +35,7 @@ const projects = [
       text: "View Documentation",
     },
     apk: {
-      url: "/Smart_Locator_Device.apkhttps://drive.google.com/drive/folders/1oDyv6I1vW2Wz312jDt_5H6OMGLnVMS0e?usp=sharing",
+      url: "https://drive.google.com/drive/folders/1oDyv6I1vW2Wz312jDt_5H6OMGLnVMS0e?usp=sharing",
       text: "Download APK",
     },
   },
