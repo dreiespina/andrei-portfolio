@@ -67,7 +67,7 @@ export default function Home() {
           Andrei Espina
         </h1>
         <div className="hero-subtitle" style={{ marginBottom: "1em", minHeight: "1.5em" }}>
-          <TypingSubtitle texts={["Looking for Internship","IT Student", "Content Creator","Aspiring Full Stack Developer"]} />
+          <TypingSubtitle texts={["IT Support Specialist Intern","IT Student", "Content Creator","Aspiring Full Stack Developer"]} />
         </div>
         <div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1.5em" }}>
           <a href="#about" className="about-btn"> About Me </a>

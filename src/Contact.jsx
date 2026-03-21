@@ -43,7 +43,7 @@ export default function Contact({ handleContactSubmit }) {
         <div className="contact-left">
           <h3>Let's Connect</h3>
           <p>
-            I'm actively looking for internship opportunities where I can apply my skills in web development, IoT systems, and network infrastructure. I'm eager to learn and contribute to innovative projects.
+            I'm actively looking for job opportunities where I can apply my skills in web development, IoT systems, and network infrastructure. I'm eager to learn and contribute to innovative projects.
           </p>
           <div className="contact-detail">
             <div><MailIcon /> <span>Email</span><br /><span className="contact-detail-value">andreiespina016@gmail.com</span></div>
@@ -65,7 +65,7 @@ export default function Contact({ handleContactSubmit }) {
                 id="message"
                 placeholder="Type your message here.."
                 required
-                defaultValue="Hi Andrei, I would like to get in touch regarding internship opportunities."
+                defaultValue="Hi Andrei, I would like to get in touch regarding job opportunities."
                 />
           </div>
           <button type="submit" className="send-btn">
