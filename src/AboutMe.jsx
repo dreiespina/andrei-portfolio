@@ -126,12 +126,16 @@ export default function AboutMe() {
           flexDirection: "column",
         }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "1rem", letterSpacing: "1px" }}>Work Experience</h2>
-          <div>
-            <div style={{ fontWeight: "bold", fontSize: "1rem" }}>{workExperience[1].title}</div>
-            <div style={{ fontSize: ".9rem", marginBottom: "0.5rem" }}>{workExperience[1].subtitle}</div>
-            <div style={{ color: "#2563eb", fontWeight: "500", marginBottom: "0.5rem" }}>{workExperience[1].period}</div>
-            <div style={{ color: "#444", fontSize: "0.8rem" }}>{workExperience[1].description}</div>
-          </div>
+          {workExperience.map((exp, idx) => (
+            <div key={idx} style={{ marginBottom: "1.2rem" }}>
+              <div style={{ fontWeight: "bold", fontSize: "1rem" }}>{exp.title}</div>
+              <div style={{ fontSize: ".9rem", marginBottom: "0.5rem" }}>{exp.subtitle}</div>
+              <div style={{ color: "#2563eb", fontWeight: "500", marginBottom: "0.5rem" }}>{exp.period}</div>
+              {exp.description && (
+                <div style={{ color: "#444", fontSize: "0.8rem" }}>{exp.description}</div>
+              )}
+            </div>
+          ))}
         </div>
         {/* Right Column: Education */}
         <div style={{
