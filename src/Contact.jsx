@@ -94,7 +94,7 @@ function Contact() {
                 name="message"
                 placeholder="Type your message here.."
                 required
-                defaultValue="Hi Andrei, I would like to get in touch regarding job."
+                defaultValue="Hi Andrei, I would like to get in touch regarding job opportunities."
                 />
           </div>
           <button type="submit" className="send-btn">
