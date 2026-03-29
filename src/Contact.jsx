@@ -94,7 +94,7 @@ function SendIcon() {
                 name="message"
                 placeholder="Type your message here.."
                 required
-                defaultValue="Hi Andrei, I would like to get in touch regarding job opportunities."
+                defaultValue="Hi Andrei, I would like to get in touch regarding job."
                 />
           </div>
           <button type="submit" className="send-btn">
