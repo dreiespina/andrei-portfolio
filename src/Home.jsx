@@ -72,7 +72,7 @@ export default function Home() {
         <div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1.5em" }}>
           <a href="#about" className="about-btn"> About Me </a>
           <a
-            href="public/ANDREI D. ESPINA _ RESUME _Developer.pdf"
+            href="/ANDREI D. ESPINA _ RESUME _Developer.pdf"
             className="about-btn"
             style={{ background: "#fff", color: "#2a2afc", border: "2px solid #2a2afc" }}
             download
