@@ -28,19 +28,16 @@ export default function AboutMe() {
 
   const workExperience = [
     {
-      title: "Project Assistant",
-      subtitle: "Project Shake II",
-      period: "2023 - 2024",
-      description:
-        "Assisted in coordinating and implementing IT-related projects. Collaborated with team members on system documentation and network assessments.",
+      title: "IT Support (On-the Job Training)",
+      subtitle: "Concentrix UP Technohub",
+      period: "Jan 2026 to Present",
+      description: "",
     },
     {
       title: "Project Assistant (National Service Training Program – NSTP)",
-      subtitle:
-        "Project Supporting Households and LGU's and Knowledge for Preparedness II (Project Shake II)",
-      period: "Feb 2023 - Jun 2023",
-      description:
-        "Developed an Exposure Database Mapping output, demonstrating proficiency in data organization and reporting. Managed project reporting and documentation flow, enhancing overall team communication and organizational efficiency.",
+      subtitle: "Project Supporting Households and LGU's and Knowledge for Preparedness II (Project Shake II)",
+      period: "Feb 2023 to Jun 2023",
+      description: "",
     },
   ];
 
