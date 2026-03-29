@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function MailIcon() {
   return (
@@ -32,7 +32,35 @@ function SendIcon() {
   );
 }
 
-export default function Contact({ handleContactSubmit }) {
+  const [status, setStatus] = useState("");
+
+  async function handleContactSubmit(e) {
+    e.preventDefault();
+    setStatus("");
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+    // You can add a subject field if you want, or set a default
+    const subject = "Contact from Portfolio";
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, subject, message })
+      });
+      if (res.ok) {
+        setStatus("Message sent successfully!");
+        form.reset();
+      } else {
+        setStatus("Failed to send message. Please try again later.");
+      }
+    } catch (err) {
+      setStatus("Failed to send message. Please try again later.");
+    }
+  }
+
   return (
     <section id="contact" className="contact-section">
       <div className="contact-header">
@@ -53,16 +81,17 @@ export default function Contact({ handleContactSubmit }) {
         <form className="contact-form" onSubmit={handleContactSubmit}>
           <div className="contact-row">
             <label htmlFor="name"></label>
-            <input id="name" type="text" placeholder="Full Name" required />
+            <input id="name" name="name" type="text" placeholder="Full Name" required />
           </div>
           <div className="contact-row">
             <label htmlFor="email"></label>
-            <input id="email" type="email" placeholder="E-mail" required />
+            <input id="email" name="email" type="email" placeholder="E-mail" required />
           </div>
           <div className="contact-row">
             <label htmlFor="message"></label>
             <textarea
                 id="message"
+                name="message"
                 placeholder="Type your message here.."
                 required
                 defaultValue="Hi Andrei, I would like to get in touch regarding job opportunities."
@@ -71,8 +100,8 @@ export default function Contact({ handleContactSubmit }) {
           <button type="submit" className="send-btn">
             Send Message
           </button>
+          {status && <div style={{ marginTop: "1em", color: status.includes("success") ? "green" : "red" }}>{status}</div>}
         </form>
       </div>
     </section>
   );
-}
