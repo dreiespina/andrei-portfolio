@@ -7,7 +7,6 @@ function MailIcon() {
       <polyline points="3 7 12 13 21 7" />
     </svg>
   );
-}
 function PhoneIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: 8, verticalAlign: "middle"}}>
@@ -105,3 +104,6 @@ function SendIcon() {
       </div>
     </section>
   );
+}
+
+
