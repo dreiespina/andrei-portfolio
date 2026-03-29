@@ -7,6 +7,7 @@ function MailIcon() {
       <polyline points="3 7 12 13 21 7" />
     </svg>
   );
+}
 function PhoneIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: 8, verticalAlign: "middle"}}>
@@ -31,6 +32,7 @@ function SendIcon() {
   );
 }
 
+function Contact() {
   const [status, setStatus] = useState("");
 
   async function handleContactSubmit(e) {
@@ -64,7 +66,6 @@ function SendIcon() {
     <section id="contact" className="contact-section">
       <div className="contact-header">
         <h2>Get In Touch</h2>
-        
       </div>
       <div className="contact-main">
         <div className="contact-left">
@@ -105,5 +106,7 @@ function SendIcon() {
     </section>
   );
 }
+
+export default Contact;
 
 
