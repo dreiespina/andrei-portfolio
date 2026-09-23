@@ -15,7 +15,7 @@ export default function AboutMe() {
     {
       degree: "Bachelor of Science in Information Technology",
       school: "Universidad de Manila",
-      period: "2025 – 2026 (expected)",
+      period: "2025 – 2026 ",
     },
     {
       degree: "Senior High School – ICT Strand",
