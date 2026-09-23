@@ -27,18 +27,19 @@ export default function AboutMe() {
   ];
 
   const workExperience = [
+     {
+      title: "Admin & IT Operations Support",
+      subtitle: "Innovation for Poverty Action Philippines",
+      period: "July 2026 to Sept 2026",
+      description: "",
+    },
     {
       title: "IT Support (On-the Job Training)",
       subtitle: "Concentrix UP Technohub",
-      period: "Jan 2026 to Present",
+      period: "Jan 2026 to April 2026",
       description: "",
     },
-    {
-      title: "Project Assistant (National Service Training Program – NSTP)",
-      subtitle: "Project Supporting Households and LGU's and Knowledge for Preparedness II (Project Shake II)",
-      period: "Feb 2023 to Jun 2023",
-      description: "",
-    },
+   
   ];
 
   const certificates = [
