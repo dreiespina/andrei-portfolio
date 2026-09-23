@@ -63,11 +63,11 @@ export default function Home() {
     <section id="home" className="hero-section">
       <div className="hero-left">
         <h1>
-          <span className="highlight">Hellooooooooo, I'm</span><br />
+          <span className="highlight">Hello, I'm</span><br />
           Andrei Espina
         </h1>
         <div className="hero-subtitle" style={{ marginBottom: "1em", minHeight: "1.5em" }}>
-          <TypingSubtitle texts={["IT Support Specialist Intern","IT Student", "Content Creator","Aspiring Full Stack Developer"]} />
+          <TypingSubtitle texts={["IT Operations Support", "IT Support Intern","IT Graduate", "Content Creator"]} />
         </div>
         <div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1.5em" }}>
           <a href="#about" className="about-btn"> About Me </a>
