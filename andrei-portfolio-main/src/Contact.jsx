@@ -74,7 +74,7 @@ function Contact() {
             I'm actively looking for job opportunities where I can apply my skills in web development, IoT systems, and network infrastructure. I'm eager to learn and contribute to innovative projects.
           </p>
           <div className="contact-detail">
-            <div><MailIcon /> <span>Email</span><br /><span className="contact-detail-value">andreiespina016@gmail.com</span></div>
+            <div><MailIcon /> <span>EMAIL</span><br /><span className="contact-detail-value">andreiespina016@gmail.com</span></div>
             <div><PhoneIcon /> <span>Phone</span><br /><span className="contact-detail-value">+63 9304075746</span></div>
           </div>
         </div>
