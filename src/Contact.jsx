@@ -81,11 +81,11 @@ function Contact() {
         <form className="contact-form" onSubmit={handleContactSubmit}>
           <div className="contact-row">
             <label htmlFor="name"></label>
-            <input id="name" name="name" type="text" placeholder="Full Name" required />
+            <input id="name" name="name" type="text" placeholder="Enter your Full Name" required />
           </div>
           <div className="contact-row">
             <label htmlFor="email"></label>
-            <input id="email" name="email" type="email" placeholder="E-mail" required />
+            <input id="email" name="email" type="email" placeholder="Enter your Email" required />
           </div>
           <div className="contact-row">
             <label htmlFor="message"></label>
@@ -94,7 +94,6 @@ function Contact() {
                 name="message"
                 placeholder="Type your message here.."
                 required
-                defaultValue="Hi Andrei, I would like to get in touch regarding job opportunities."
                 />
           </div>
           <button type="submit" className="send-btn">
