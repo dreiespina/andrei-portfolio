@@ -102,7 +102,7 @@ export default function AboutMe() {
         textAlign: "center"
       }}>
         <h2 style={{ fontSize: "2.3rem", fontWeight: "bold", marginBottom: "1rem" }}>About Me</h2>
-        <p style={{ fontSize: "20px", textAlign: "justify" }}>
+        <p style={{ fontSize: "17px", textAlign: "justify" }}>
           I'm a BS Information Technology graduate from Universidad de Manila with hands-on experience in IT operations support, web development, system design, and IoT projects. Most recently, I worked as an Admin & IT Operations Support at Innovation for Poverty Action Philippines and completed my IT Operations Support OJT at Concentrix UP Technohub, handling system deployment, hardware/software troubleshooting, ticketing, and operational support. 
          
           I consider myself adaptable, proactive, and naturally curious when it comes to solving technical problems. I enjoy learning through real-world projects, collaborating with others, and continuously improving my skills as I prepare to grow into a IT career.
