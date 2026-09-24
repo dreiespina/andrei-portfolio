@@ -71,7 +71,7 @@ function Contact() {
         <div className="contact-left">
           <h3>Let's Connect</h3>
           <p>
-            I'm actively looking for job opportunities where I can apply my skills in web development, IoT systems, and network infrastructure. I'm eager to learn and contribute to innovative projects.
+            I’m actively looking for opportunities to apply my technical skills in IT support, system administration, and web development while contributing to innovative projects.
           </p>
           <div className="contact-detail">
             <div><MailIcon /> <span>Email</span><br /><span className="contact-detail-value">andreiespina016@gmail.com</span></div>
