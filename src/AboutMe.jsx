@@ -9,6 +9,7 @@ import cert5 from "./assets/cert-udm.jpg";
 import cert6 from "./assets/cert-trends.png";
 import lccmSeal from "./assets/LCCM_Seal.png"; // Add this import at the top
 import udmSeal from "./assets/UDM_Seal.webp"; // Add this import at the top
+import avatar from "./assets/my-photo.jpg"; // Add this import at the top
 
 export default function AboutMe() {
   const education = [
@@ -78,6 +79,7 @@ export default function AboutMe() {
   // Slidable certificates logic
   const [current, setCurrent] = useState(0);
   const [modal, setModal] = useState({ open: false, cert: null });
+  const [selectedPanel, setSelectedPanel] = useState(null);
   const certificatesPerPage = 4;
   const totalPages = Math.ceil(certificates.length / certificatesPerPage);
   const currentPage = Math.floor(current / certificatesPerPage);
@@ -93,116 +95,56 @@ export default function AboutMe() {
   const goToSlide = (idx) => setCurrent(idx * certificatesPerPage);
 
   return (
-    <section id="about" className="about-section" style={{ padding: "2rem 0" }}>
-      {/* Top: About Me full width */}
-      <div style={{
-        width: "100%",
-        maxWidth: "1100px",
-        margin: "0 auto 2rem auto",
-        textAlign: "center"
-      }}>
-        <h2 style={{ fontSize: "2.3rem", fontWeight: "bold", marginBottom: "1rem" }}>About Me</h2>
-        <p style={{ fontSize: "17px", textAlign: "justify" }}>
-          I'm a BS Information Technology graduate from Universidad de Manila with hands-on experience in IT operations support, web development, system design, and IoT projects. Most recently, I worked as an Admin & IT Operations Support at Innovation for Poverty Action Philippines and completed my IT Operations Support OJT at Concentrix UP Technohub, handling system deployment, hardware/software troubleshooting, ticketing, and operational support. 
-         
-          I consider myself adaptable, proactive, and naturally curious when it comes to solving technical problems. I enjoy learning through real-world projects, collaborating with others, and continuously improving my skills as I prepare to grow into a IT career.
-        </p>
-      </div>
+    <section id="about" className="about-section">
+      <div className="about-layout">
+        <div className="about-portrait">
+          <img src={avatar} alt="Andrei Espina in formal attire" />
+        </div>
 
-      {/* Middle: Two columns */}
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: "2rem",
-        maxWidth: "1100px",
-        margin: "0 auto 2rem auto"
-      }}>
-        {/* Left Column: Work Experience */}
-        <div style={{
-          background: "#ffffffff",
-          borderRadius: "1rem",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-          padding: ".5rem",
-          display: "flex",
-          flexDirection: "column",
-        }}>
-          <h2 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "1rem", letterSpacing: "1px" }}>Work Experience</h2>
-          {workExperience.map((exp, idx) => (
-            <div key={idx} style={{ marginBottom: "1.2rem" }}>
-              <div style={{ fontWeight: "bold", fontSize: "1rem" }}>{exp.title}</div>
-              <div style={{ fontSize: ".9rem", marginBottom: "0.5rem" }}>{exp.subtitle}</div>
-              <div style={{ color: "#2563eb", fontWeight: "500", marginBottom: "0.5rem" }}>{exp.period}</div>
-              {exp.description && (
-                <div style={{ color: "#444", fontSize: "0.8rem" }}>{exp.description}</div>
-              )}
-            </div>
-          ))}
-        </div>
-        {/* Right Column: Education */}
-        <div style={{
-          background: "#ffffffff",
-          borderRadius: "1rem",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-          padding: ".5rem",
-          display: "flex",
-          flexDirection: "column",
-        }}>
-          <h2 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "1rem", letterSpacing: "1px" }}>Education</h2>
-         <div style={{ fontWeight: "normal", fontSize: "1rem", marginTop: "0.5rem" }}>
-  {education.map((edu, idx) => (
-    <div
-      key={idx}
-      style={{
-        marginBottom: "1rem",
-        display: "flex",
-        alignItems: "center",
-        gap: "1.5rem",
-        justifyContent: "space-between"
-      }}
-    >
-      <div style={{ flex: 1 }}>
-        <div style={{ fontWeight: "bold", fontSize: "1rem" }}>{edu.degree}</div>
-        <div style={{ fontSize: ".9rem" }}>{edu.school}</div>
-        <div style={{ color: "#2563eb", fontWeight: "500" }}>{edu.period}</div>
-        <div style={{ color: "#888", fontSize: "0.9rem" }}>{edu.description}</div>
-      </div>
-      {/* Show seal for each school, centered vertically */}
-      {edu.school === "La Consolacion College Manila" && (
-        <img
-          src={lccmSeal}
-          alt="LCCM Seal"
-          style={{
-            width: "54px",
-            height: "54px",
-            objectFit: "contain",
-            borderRadius: "0.5rem",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-            background: "#fff",
-            display: "block"
-          }}
-        />
-      )}
-      {edu.school === "Universidad de Manila" && (
-        <img
-          src={udmSeal}
-          alt="UDM Seal"
-          style={{
-            width: "54px",
-            height: "54px",
-            objectFit: "contain",
-            borderRadius: "0.5rem",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-            background: "#fff",
-            display: "block"
-          }}
-        />
-      )}
-    </div>
-  ))}
-</div>
+        <div className="about-content">
+          <h2>About Me</h2>
+          <p>
+            I'm a BS Information Technology graduate from Universidad de Manila with hands-on experience in IT operations support, web development, system design, and IoT projects. Most recently, I worked as an Admin &amp; IT Operations Support at Innovation for Poverty Action Philippines and completed my IT Operations Support OJT at Concentrix UP Technohub, handling system deployment, hardware/software troubleshooting, ticketing, and operational support. I consider myself adaptable, proactive, and naturally curious when it comes to solving technical problems. I enjoy learning through real-world projects, collaborating with others, and continuously improving my skills as I prepare to grow into an IT career.
+          </p>
+
+          <div className="about-panel-buttons">
+            <button
+              type="button"
+              className={selectedPanel === "work" ? "about-panel-button selected" : "about-panel-button"}
+              onClick={() => setSelectedPanel(selectedPanel === "work" ? null : "work")}
+              aria-expanded={selectedPanel === "work"}
+            >
+              Work Experience
+            </button>
+            <button
+              type="button"
+              className={selectedPanel === "education" ? "about-panel-button selected" : "about-panel-button"}
+              onClick={() => setSelectedPanel(selectedPanel === "education" ? null : "education")}
+              aria-expanded={selectedPanel === "education"}
+            >
+              Education
+            </button>
           </div>
+
+          {selectedPanel && (
+            <div className="about-panel-details">
+              {selectedPanel === "work" ? workExperience.map((exp) => (
+                <div key={exp.title}>
+                  <strong>{exp.title}</strong>
+                  <span>{exp.subtitle}</span>
+                  <small>{exp.period}</small>
+                </div>
+              )) : education.map((edu) => (
+                <div key={edu.degree}>
+                  <strong>{edu.degree}</strong>
+                  <span>{edu.school}</span>
+                  <small>{edu.period}</small>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
-      
+      </div>
 
       {/* Bottom: Certificates full width */}
       <div style={{ width: "100%", maxWidth: "1400px", margin: "0 auto" }}>
