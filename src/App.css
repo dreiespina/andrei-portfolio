@@ -512,10 +512,10 @@ main {
 
 .about-portrait img {
   display: block;
-  width: min(100%, 390px);
-  height: 100%;
-  object-fit: contain;
-  object-position: bottom center;
+  width: min(100%, 490px);
+  height: 90%;
+  object-fit:contain;
+  object-position: left;
 }
 
 .about-content {
@@ -526,7 +526,7 @@ main {
 .about-content h2 {
   margin: 0 0 0.9rem;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
   font-size: 35px;
   color: #111;
   font-weight: 700;
@@ -535,7 +535,7 @@ main {
 .about-content > p {
   max-width: 600px;
   margin: 0 auto;
-  font-size: 0.74rem;
+  font-size: 0.85rem;
   line-height: 1.25;
   text-align: justify;
 }
@@ -544,7 +544,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
-  margin-top: 2.1rem;
+  margin-top: 0.8rem;
 }
 
 .about-info-panel {
@@ -786,10 +786,6 @@ main {
     max-height: 380px;
   }
 
-  .about-portrait img {
-    width: min(100%, 320px);
-    max-width: min(100%, 320px) !important;
-  }
 
   .about-content {
     padding-top: 0;
