@@ -601,6 +601,101 @@ main {
   font-size: 0.68rem;
 }
 
+.certificates-trigger {
+  display: block;
+  margin: 0 auto 1.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #111;
+  font: inherit;
+  font-size: 1.35rem;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: none;
+  transition: color 0.2s;
+}
+
+.certificates-trigger:hover,
+.certificates-trigger:focus-visible {
+  border-color: transparent;
+  background: transparent;
+  color: #2563eb;
+  transform: none;
+}
+
+.certificate-modal-content {
+  width: min(1050px, 82vw);
+  overflow: auto;
+  padding: 0.5rem;
+}
+
+.certificate-modal-content h2 {
+  margin: 0 0 1.25rem;
+  color: #111;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.certificate-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.certificate-modal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+  text-align: left;
+}
+
+.certificate-modal-card img {
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.certificate-modal-card strong {
+  font-size: 0.78rem;
+  line-height: 1.25;
+}
+
+.certificate-modal-card span {
+  color: #555;
+  font-size: 0.7rem;
+  line-height: 1.25;
+}
+
+.certificate-card-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.certificate-card-actions a,
+.certificate-action {
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.certificate-card-actions a:hover,
+.certificate-action:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
 .about-header {
   text-align: center;
   margin: 0 auto 3em auto;
@@ -842,5 +937,15 @@ main {
   }
   .navbar li {
     margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .certificate-modal-content {
+    width: 78vw;
+  }
+
+  .certificate-modal-grid {
+    grid-template-columns: 1fr;
   }
 }

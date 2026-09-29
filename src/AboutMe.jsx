@@ -47,31 +47,37 @@ export default function AboutMe() {
     {
       image: cert1,
       title: "Big Data and Privacy: Strategic Insights for Balancing Innovations with Data Regulation",
+      organization: "Big Data Philippines",
       year: "2024",
     },
     {
       image: cert2,
       title: "Empowering Innovation with Azure OpenAI Assistant – Styava.Dev",
+      organization: "Styava.Dev",
       year: "2024",
     },
     {
       image: cert3,
       title: "Project Shake II Participation",
+      organization: "Project Shake II",
       year: "2023",
     },
     {
       image: cert4,
       title: "IJRISS Publication – Smart Faculty Evaluation",
+      organization: "International Journal of Research and Innovation in Social Science",
       year: "2025",
     },
     {
       image: cert5,
       title: "Certificate of Appreciation – Technical Assistant, Practical Digital Skills Enhancement",
+      organization: "Universidad de Manila",
       year: "2025",
     },
     {
       image: cert6,
       title: "Emerging Trends and Technologies: Cutting-edge Strategies and Innovation in Software Development",
+      organization: "Universidad de Manila",
       year: "2024",
     },
   ];
@@ -157,9 +163,14 @@ export default function AboutMe() {
 
       {/* Bottom: Certificates full width */}
       <div style={{ width: "100%", maxWidth: "1400px", margin: "0 auto" }}>
-        <div style={{ fontWeight: "bold", fontSize: "1.35rem", color: "#111", marginBottom: "1.5rem", textAlign: "center" }}>
+        <button
+          type="button"
+          className="certificates-trigger"
+          onClick={() => setModal({ open: true, cert: null })}
+          aria-label="Open certificates and seminars"
+        >
           Certificates & Seminars Attended
-        </div>
+        </button>
         <div style={{
           display: "flex",
           gap: "1rem",
@@ -236,7 +247,7 @@ export default function AboutMe() {
 </div>
       </div>
 
-     {/* Modal for certificate image */}
+    {/* Modal for certificate cards or an individual certificate */}
 {modal.open && (
   <div
     onClick={() => setModal({ open: false, cert: null })}
@@ -292,25 +303,53 @@ export default function AboutMe() {
       >
         &times;
       </button>
-      <img
-        src={modal.cert.image}
-        alt={modal.cert.title}
-        style={{
-          maxWidth: "80vw",
-          maxHeight: "60vh",
-          borderRadius: "1rem",
-          marginBottom: "1.5rem",
-          background: "#f3f4f6",
-          objectFit: "contain",
-          boxShadow: "0 2px 16px rgba(0,0,0,0.10)"
-        }}
-      />
-      <div style={{ fontWeight: "bold", fontSize: "1.2rem", marginBottom: "0.5rem", textAlign: "center", color: "#222" }}>
-        {modal.cert.title}
-      </div>
-      <div style={{ color: "#2563eb", fontWeight: "500", marginBottom: "1.2rem", fontSize: "1rem" }}>
-        {modal.cert.year}
-      </div>
+      {modal.cert ? (
+        <>
+          <img
+            src={modal.cert.image}
+            alt={modal.cert.title}
+            style={{
+              maxWidth: "80vw",
+              maxHeight: "60vh",
+              borderRadius: "1rem",
+              marginBottom: "1.5rem",
+              background: "#f3f4f6",
+              objectFit: "contain",
+              boxShadow: "0 2px 16px rgba(0,0,0,0.10)"
+            }}
+          />
+          <div style={{ fontWeight: "bold", fontSize: "1.2rem", marginBottom: "0.5rem", textAlign: "center", color: "#222" }}>
+            {modal.cert.title}
+          </div>
+          <div style={{ color: "#2563eb", fontWeight: "500", marginBottom: "1.2rem", fontSize: "1rem" }}>
+            {modal.cert.organization} | {modal.cert.year}
+          </div>
+          <a className="certificate-action" href={modal.cert.image} target="_blank" rel="noopener noreferrer">
+            View Certificate
+          </a>
+        </>
+      ) : (
+        <div className="certificate-modal-content">
+          <h2>Certificates &amp; Seminars Attended</h2>
+          <div className="certificate-modal-grid">
+            {certificates.map((cert) => (
+              <article className="certificate-modal-card" key={cert.title}>
+                <img src={cert.image} alt={cert.title} />
+                <strong>{cert.title}</strong>
+                <span>{cert.organization} | {cert.year}</span>
+                <div className="certificate-card-actions">
+                  <a href={cert.image} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                    View
+                  </a>
+                  <a href={cert.image} download onClick={(e) => e.stopPropagation()}>
+                    Download
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
       
     </div>
   </div>
