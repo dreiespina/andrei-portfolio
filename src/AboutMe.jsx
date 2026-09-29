@@ -115,14 +115,7 @@ export default function AboutMe() {
 
           <div className="about-panel-buttons">
             <div className="about-info-panel">
-              <button
-                type="button"
-                className={selectedPanel === "work" ? "about-panel-button selected" : "about-panel-button"}
-                onClick={() => setSelectedPanel(selectedPanel === "work" ? null : "work")}
-                aria-expanded={selectedPanel === "work"}
-              >
                 Work Experience
-              </button>
               {(selectedPanel === null || selectedPanel === "work") && (
                 <div className="about-panel-details">
                   {workExperience.map((exp) => (
@@ -137,14 +130,8 @@ export default function AboutMe() {
             </div>
 
             <div className="about-info-panel">
-              <button
-                type="button"
-                className={selectedPanel === "education" ? "about-panel-button selected" : "about-panel-button"}
-                onClick={() => setSelectedPanel(selectedPanel === "education" ? null : "education")}
-                aria-expanded={selectedPanel === "education"}
-              >
                 Education
-              </button>
+        
               {(selectedPanel === null || selectedPanel === "education") && (
                 <div className="about-panel-details">
                   {education.map((edu) => (

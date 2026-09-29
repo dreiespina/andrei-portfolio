@@ -525,9 +525,11 @@ main {
 
 .about-content h2 {
   margin: 0 0 0.9rem;
-  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
-  font-weight: 500;
   text-align: center;
+  margin-top: 50px;
+  font-size: 35px;
+  color: #111;
+  font-weight: 700;
 }
 
 .about-content > p {
@@ -541,13 +543,15 @@ main {
 .about-panel-buttons {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.7rem;
   gap: 2rem;
   margin-top: 2.1rem;
 }
 
 .about-info-panel {
   min-width: 0;
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .about-panel-button {
@@ -587,18 +591,16 @@ main {
   gap: 0.15rem;
 }
 
+.about-panel-details strong {
+  font-size: 0.75rem;
+  margin-bottom: 0.1rem;
+  margin-top: 0.5rem;
+}
+
 .about-panel-details span,
 .about-panel-details small {
   color: #444;
-}
-
-.about-panel-details strong {
-  font-size: 0.72rem;
-}
-
-.about-panel-details span,
-.about-panel-details small {
-  font-size: 0.68rem;
+  font-size: 0.9rem;
 }
 
 .certificates-trigger {
@@ -705,100 +707,6 @@ main {
   text-decoration: underline;
 }
 
-.about-header {
-  text-align: center;
-  margin: 0 auto 3em auto;
-  max-width: 700px;
-  padding-top: 2.5em;
-}
-
-.about-header h2 {
-  font-size: 2.7em;
-  font-weight: 700;
-  margin-bottom: 0.5em;
-  color: #111;
-}
-
-.about-header p {
-  color: #222;
-  font-size: 1.15em;
-  line-height: 1.6;
-}
-
-.about-block {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.about-block-title {
-  display: flex;
-  align-items: center;
-  font-size: 2em;
-  font-weight: 700;
-  margin-bottom: 1.5em;
-  color: #111;
-}
-
-.about-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-}
-
-.about-card {
-  background: #fff;
-  border: 1.5px solid #e5e7eb;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  padding: 2em 2.5em;
-  margin-bottom: 0.5em;
-  transition: box-shadow 0.2s;
-}
-
-.about-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 0.7em;
-}
-
-.about-card-title {
-  color: #2563eb;
-  font-size: 1.2em;
-  font-weight: 600;
-}
-
-.about-card-period {
-  color: #888;
-  font-size: 1em;
-  font-weight: 400;
-}
-
-.about-card-school {
-  font-size: 1.1em;
-  font-weight: 500;
-  margin-bottom: 0.3em;
-  color: #222;
-}
-
-.about-card-desc {
-  color: #555;
-  font-size: 1em;
-  margin-top: 0.2em;
-}
-
-@media (max-width: 700px) {
-  .about-card {
-    padding: 1.2em 1em;
-  }
-  .about-header h2 {
-    font-size: 2em;
-  }
-  .about-block-title {
-    font-size: 1.2em;
-  }
-}
-
 @media (max-width: 700px) {
   .about-section {
     padding: 1rem 0.5rem !important;
@@ -807,37 +715,12 @@ main {
     max-width: 100% !important;
     margin: 0 auto 1rem auto !important;
   }
-  /* Middle columns: stack vertically */
-  .about-section > div:nth-child(2) {
-    display: block !important;
-    grid-template-columns: none !important;
-    gap: 0 !important;
-  }
-  .about-section > div:nth-child(2) > div {
-    margin-bottom: 1.5rem;
-  }
   .about-section h2 {
     font-size: 1.3rem !important;
     margin-bottom: 0.7rem !important;
   }
   .about-section p {
     font-size: 0.95rem !important;
-  }
-  /* Education logos */
-  .about-section img {
-    max-width: 48px !important;
-    height: auto !important;
-  }
-  /* Certificates: stack vertically */
-  .about-section > div:nth-child(3) > div {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 1rem !important;
-  }
-  .about-section > div:nth-child(3) > div > div {
-    min-width: 0 !important;
-    max-width: 100% !important;
-    padding: 1rem !important;
   }
 }
 
