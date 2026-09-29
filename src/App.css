@@ -545,35 +545,39 @@ main {
   margin-top: 2rem;
 }
 
+.about-info-panel {
+  min-width: 0;
+}
+
 .about-panel-button {
-  min-height: 124px;
-  padding: 0.75rem;
-  border: 3px solid #111;
-  border-radius: 13px;
+  width: 100%;
+  min-height: 0;
+  padding: 0 0 0.7rem;
+  border: 0;
+  border-radius: 0;
   background: #fff;
   color: #111;
   font: inherit;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
   box-shadow: none;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  transition: color 0.2s;
 }
 
 .about-panel-button:hover,
 .about-panel-button.selected {
-  border-color: #111;
-  background: #111;
-  color: #fff;
-  transform: translateY(-2px);
+  border-color: transparent;
+  background: #fff;
+  color: #2563eb;
 }
 
 .about-panel-details {
   display: grid;
   gap: 0.75rem;
-  margin-top: 1rem;
-  padding: 1rem;
-  border-left: 3px solid #111;
-  background: #f5f5f5;
+  min-height: 86px;
+  margin-top: 0;
+  padding: 0.6rem;
+  background: #f4f4f4;
   text-align: left;
 }
 
@@ -585,6 +589,15 @@ main {
 .about-panel-details span,
 .about-panel-details small {
   color: #444;
+}
+
+.about-panel-details strong {
+  font-size: 0.7rem;
+}
+
+.about-panel-details span,
+.about-panel-details small {
+  font-size: 0.65rem;
 }
 
 .about-header {
@@ -807,7 +820,7 @@ main {
   }
 
   .about-panel-button {
-    min-height: 100px;
+    min-height: 0;
     font-size: 1rem;
   }
 }

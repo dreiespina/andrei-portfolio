@@ -108,41 +108,50 @@ export default function AboutMe() {
           </p>
 
           <div className="about-panel-buttons">
-            <button
-              type="button"
-              className={selectedPanel === "work" ? "about-panel-button selected" : "about-panel-button"}
-              onClick={() => setSelectedPanel(selectedPanel === "work" ? null : "work")}
-              aria-expanded={selectedPanel === "work"}
-            >
-              Work Experience
-            </button>
-            <button
-              type="button"
-              className={selectedPanel === "education" ? "about-panel-button selected" : "about-panel-button"}
-              onClick={() => setSelectedPanel(selectedPanel === "education" ? null : "education")}
-              aria-expanded={selectedPanel === "education"}
-            >
-              Education
-            </button>
-          </div>
-
-          {selectedPanel && (
-            <div className="about-panel-details">
-              {selectedPanel === "work" ? workExperience.map((exp) => (
-                <div key={exp.title}>
-                  <strong>{exp.title}</strong>
-                  <span>{exp.subtitle}</span>
-                  <small>{exp.period}</small>
+            <div className="about-info-panel">
+              <button
+                type="button"
+                className={selectedPanel === "work" ? "about-panel-button selected" : "about-panel-button"}
+                onClick={() => setSelectedPanel(selectedPanel === "work" ? null : "work")}
+                aria-expanded={selectedPanel === "work"}
+              >
+                Work Experience
+              </button>
+              {(selectedPanel === null || selectedPanel === "work") && (
+                <div className="about-panel-details">
+                  {workExperience.map((exp) => (
+                    <div key={exp.title}>
+                      <strong>{exp.title}</strong>
+                      <span>{exp.subtitle}</span>
+                      <small>{exp.period}</small>
+                    </div>
+                  ))}
                 </div>
-              )) : education.map((edu) => (
-                <div key={edu.degree}>
-                  <strong>{edu.degree}</strong>
-                  <span>{edu.school}</span>
-                  <small>{edu.period}</small>
-                </div>
-              ))}
+              )}
             </div>
-          )}
+
+            <div className="about-info-panel">
+              <button
+                type="button"
+                className={selectedPanel === "education" ? "about-panel-button selected" : "about-panel-button"}
+                onClick={() => setSelectedPanel(selectedPanel === "education" ? null : "education")}
+                aria-expanded={selectedPanel === "education"}
+              >
+                Education
+              </button>
+              {(selectedPanel === null || selectedPanel === "education") && (
+                <div className="about-panel-details">
+                  {education.map((edu) => (
+                    <div key={edu.degree}>
+                      <strong>{edu.degree}</strong>
+                      <span>{edu.school}</span>
+                      <small>{edu.period}</small>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
 
