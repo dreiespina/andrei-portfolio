@@ -617,6 +617,15 @@ main {
   transition: color 0.2s;
 }
 
+.about-certificates-gallery {
+  display: none;
+}
+
+.about-certificates-trigger {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
 .certificates-trigger:hover,
 .certificates-trigger:focus-visible {
   border-color: transparent;

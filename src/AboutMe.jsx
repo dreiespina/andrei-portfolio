@@ -158,11 +158,20 @@ export default function AboutMe() {
               )}
             </div>
           </div>
+
+          <button
+            type="button"
+            className="certificates-trigger about-certificates-trigger"
+            onClick={() => setModal({ open: true, cert: null })}
+            aria-label="Open certificates and seminars"
+          >
+            Certificates &amp; Seminars Attended
+          </button>
         </div>
       </div>
 
       {/* Bottom: Certificates full width */}
-      <div style={{ width: "100%", maxWidth: "1400px", margin: "0 auto" }}>
+      <div className="about-certificates-gallery" style={{ width: "100%", maxWidth: "1400px", margin: "0 auto" }}>
         <button
           type="button"
           className="certificates-trigger"
